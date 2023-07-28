@@ -8,7 +8,8 @@ class AddField(models.Model):
 
 
 # class User(AbstractUser):
-#     country = models.CharField(max_length=50,blank=True,null=True)
+#     country = models.CharField(max_length=50,blank=True,null=False)
+    
     
 
 
