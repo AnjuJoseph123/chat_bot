@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="bodydesign" style="padding-left: 500px;">
+    <form action="" method="post">
+        {% csrf_token %}
+    <div class="card" style="width: 18rem;padding-left: 35px;background-color: lightslategray;">
+        <div class="card-body">
+          <h4 class="card-title" style="padding-left: 18px;;"><u>SignUp Here</u></h4><br>
+          <label for="username">Username</label><br>
+          <input type="text" placeholder="Username" name="username" id="username">
+      <br><br>
+          <label for="email">Email</label><br>
+          <input type="email" placeholder="Email or Phone" name="email" id="email">
+      <br><br>
+          <label for="password1">Password</label><br>
+          <input type="password" placeholder="Password" name="password1" id="password1">
+          <br><br>
+          <label for="password2">Conform Password</label><br>
+          <input type="password" placeholder="Conform Password" name="password2" id="password2"><br><br>
+          <div class="but" style="padding-left: 30px;">
+          <button type="submit" style="border-radius: 30px;padding-left: 20px;padding-right: 20px;">SignUp</button>
+        </div>
+          <p><a href="login">I have already an account</a></p>
+     
+          </div>
+      </div>  
+    </form>
+</div>
+
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--favicon-->
+    {% load static %}
+	<link rel="icon" href="{% static 'assets/images/googlelogo' %}" type="image/png" />
+	<!--plugins-->
+	<link href="{% static 'assets/plugins/simplebar/css/simplebar.css'%}" rel="stylesheet" />
+	<link href="{% static 'assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css' %}" rel="stylesheet" />
+	<link href="{% static 'assets/plugins/metismenu/css/metisMenu.min.css' %}" rel="stylesheet" />
+	<!-- loader-->
+	<link href="{% static 'assets/css/pace.min.css'%}" rel="stylesheet" />
+	<script src="{% static 'assets/js/pace.min.js' %}"></script>
+	<!-- Bootstrap CSS -->
+	<link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/css/bootstrap-extended.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/css/app.css' %}" rel="stylesheet">
+	<link href="{% static 'assets/css/icons.css' %}" rel="stylesheet">
+	<title>Shopify-Signup</title>
+</head>
+
+<body class="bg-login">
+	<!--wrapper-->
+	<div class="wrapper">
+		<div class="d-flex align-items-center justify-content-center my-5 my-lg-0">
+			<div class="container">
+				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-2">
+					<div class="col mx-auto">
+						<div class="my-4 text-center">
+							<img src="{% static 'assets/images/shpilogo.png' %}" width="180" alt="" />
+						</div>
+                        <form action="" method="post">
+                            {% csrf_token %}
+						<div class="card">
+							<div class="card-body">
+								<div class="border p-4 rounded">
+									<div class="text-center">
+										<h3 class="">Sign Up</h3>
+										<p>Already have an account? <a href="login">Sign in here</a>
+										</p>
+									</div>
+									
+									<div class="form-body">
+										<form class="row g-3">
+											<div class="col-sm-6">
+												<label for="inputFirstName" class="form-label">First Name</label>
+												<input type="text" class="form-control" id="inputFirstName" placeholder="Jhon" name="Fname">
+											</div>
+											<div class="col-sm-6">
+												<label for="inputLastName" class="form-label">Last Name</label>
+												<input type="text" class="form-control" id="inputLastName" placeholder="Joseph" name="Lname">
+											</div>
+											
+											<div class="col-12">
+												<label for="inputEmailAddress" class="form-label">Email Address</label>
+												<input type="email" class="form-control" id="inputEmailAddress" placeholder="example@user.com" name="email">
+											</div>
+											<div class="col-12">
+												<label for="inputChoosePassword" class="form-label">Password</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="password" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password" name="password1"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+												</div>
+                                                <div class="col-12">
+                                                    <label for="inputChoosePassword" class="form-label">Confirm Password</label>
+                                                    <div class="input-group" id="show_hide_password">
+                                                        <input type="password" class="form-control border-end-0" id="inputConfirmPassword" name="password2" value="12345678" placeholder="RE-Enter Password" > <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+                                                    </div>
+											</div>
+											<div class="col-12">
+												<label for="inputSelectCountry" class="form-label">Country</label>
+												<select class="form-select" id="inputSelectCountry" aria-label="Default select example" name="country">
+													<option selected>India</option>
+													<option value="1">United Kingdom</option>
+													<option value="2">America</option>
+													<option value="3">Dubai</option>
+												</select>
+											</div>
+											<!-- <div class="col-12">
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+													<label class="form-check-label" for="flexSwitchCheckChecked">I read and agree to Terms & Conditions</label>
+												</div> -->
+											</div><br>
+											<div class="col-12">
+												<div class="d-grid">
+													<a href="login"><button type="submit" class="btn btn-primary"><i class='bx bx-user'></i>Sign up</button></a>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--end row-->
+			</div>
+		</div>
+	</div>
+	<!--end wrapper-->
+	<!-- Bootstrap JS -->
+	<script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+	<!--plugins-->
+	<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+	<script src="{% static 'assets/plugins/simplebar/js/simplebar.min.js' %}"></script>
+	<script src="{% static 'assets/plugins/metismenu/js/metisMenu.min.js' %}"></script>
+	<script src="{% static 'assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js' %}"></script>
+	<!--Password show & hide js -->
+</form>
+	<script>
+		$(document).ready(function () {
+			$("#show_hide_password a").on('click', function (event) {
+				event.preventDefault();
+				if ($('#show_hide_password input').attr("type") == "text") {
+					$('#show_hide_password input').attr('type', 'password');
+					$('#show_hide_password i').addClass("bx-hide");
+					$('#show_hide_password i').removeClass("bx-show");
+				} else if ($('#show_hide_password input').attr("type") == "password") {
+					$('#show_hide_password input').attr('type', 'text');
+					$('#show_hide_password i').removeClass("bx-hide");
+					$('#show_hide_password i').addClass("bx-show");
+				}
+			});
+		});
+	</script>
+	
+	<!--app JS-->
+	<script src="{% static 'assets/js/app.js' %}"></script>
+</body>
+
+</html>
