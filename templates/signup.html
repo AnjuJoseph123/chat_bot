@@ -86,11 +86,11 @@
 									
 									<div class="form-body">
 										<form class="row g-3">
-											<div class="col-sm-6">
+											<div class="col-12">
 												<label for="inputFirstName" class="form-label">First Name</label>
 												<input type="text" class="form-control" id="inputFirstName" placeholder="Jhon" name="Fname">
 											</div>
-											<div class="col-sm-6">
+											<div class="col-12">
 												<label for="inputLastName" class="form-label">Last Name</label>
 												<input type="text" class="form-control" id="inputLastName" placeholder="Joseph" name="Lname">
 											</div>
@@ -113,10 +113,10 @@
 											<div class="col-12">
 												<label for="inputSelectCountry" class="form-label">Country</label>
 												<select class="form-select" id="inputSelectCountry" aria-label="Default select example" name="country">
-													<option selected>India</option>
-													<option value="1">United Kingdom</option>
-													<option value="2">America</option>
-													<option value="3">Dubai</option>
+													<option selected value="India">India</option>
+													<option value="United Kingdom">United Kingdom</option>
+													<option value="America">America</option>
+													<option value="Dubai">Dubai</option>
 												</select>
 											</div>
 											<!-- <div class="col-12">
@@ -125,9 +125,21 @@
 													<label class="form-check-label" for="flexSwitchCheckChecked">I read and agree to Terms & Conditions</label>
 												</div> -->
 											</div><br>
+											{% if messages %}
+											<ul class="messages" style="list-style-type: none;">
+												{% for message in messages %}
+												<li
+													{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+													<p class="text-danger">{{ message }}</p>
+												</li>
+												{% endfor %}
+											</ul>
+
+
+											{% endif %}
 											<div class="col-12">
 												<div class="d-grid">
-													<a href="login"><button type="submit" class="btn btn-primary"><i class='bx bx-user'></i>Sign up</button></a>
+													<button type="submit" class="btn btn-primary"><i class='bx bx-user'></i>Sign up</button>
 												</div>
 											</div>
 										</form>
